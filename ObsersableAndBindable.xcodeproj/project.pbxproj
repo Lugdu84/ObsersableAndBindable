@@ -11,6 +11,7 @@
 		28E59B202A7692B500218380 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E59B1F2A7692B500218380 /* ContentView.swift */; };
 		28E59B222A7692B500218380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E59B212A7692B500218380 /* Assets.xcassets */; };
 		28E59B262A7692B500218380 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E59B252A7692B500218380 /* Preview Assets.xcassets */; };
+		28E59B2E2A769FF800218380 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E59B2D2A769FF800218380 /* ColorPalette.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		28E59B212A7692B500218380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28E59B232A7692B500218380 /* ObsersableAndBindable.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ObsersableAndBindable.entitlements; sourceTree = "<group>"; };
 		28E59B252A7692B500218380 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		28E59B2D2A769FF800218380 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		28E59B1C2A7692B500218380 /* ObsersableAndBindable */ = {
 			isa = PBXGroup;
 			children = (
+				28E59B2C2A769F2C00218380 /* Model */,
 				28E59B1D2A7692B500218380 /* ObsersableAndBindableApp.swift */,
 				28E59B1F2A7692B500218380 /* ContentView.swift */,
 				28E59B212A7692B500218380 /* Assets.xcassets */,
@@ -67,6 +70,14 @@
 				28E59B252A7692B500218380 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		28E59B2C2A769F2C00218380 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				28E59B2D2A769FF800218380 /* ColorPalette.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			files = (
 				28E59B202A7692B500218380 /* ContentView.swift in Sources */,
 				28E59B1E2A7692B500218380 /* ObsersableAndBindableApp.swift in Sources */,
+				28E59B2E2A769FF800218380 /* ColorPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
