@@ -8,7 +8,8 @@
 import SwiftUI
 
 @Observable
-class ColorPalette {
+class ColorPalette: Identifiable {
+    var id = UUID()
     var color: Color = .primary
     var name: String = ""
     

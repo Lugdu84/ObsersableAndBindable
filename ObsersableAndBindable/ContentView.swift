@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var text = ""
     @State var color: Color = .primary
+    let model: ColorList = ColorList(colors: [])
     
     var body: some View {
         NavigationStack {
@@ -22,11 +23,28 @@ struct ContentView: View {
                 })
                 .padding()
                 Button("Ajouter") {
-                    
+                    model.colors.append(ColorPalette(color: color, name: text))
+                    text = ""
+                }.disabled(text.isEmpty)
+                Divider()
+                ScrollView(.horizontal) {
+                    HStack(content: {
+                        ForEach(model.colors) { palette in
+                            Circle()
+                                .frame(width: 30, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .foregroundColor(palette.color)
+                        }
+                    })
+                    .padding()
                 }
                 Divider()
                 List {
-                    
+                    ForEach(model.colors) { palette in
+                        Text(palette.name)
+                    }
+                    .onDelete(perform: { indexSet in
+                        model.colors.remove(atOffsets: indexSet)
+                    })
                 }
             })
             .navigationTitle("Observable")
