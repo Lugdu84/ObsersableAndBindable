@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var text = ""
+    @State var color: Color = .primary
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack(content: {
+                HStack(content: {
+                    TextField("Nom", text: $text)
+                        .textFieldStyle(.roundedBorder)
+                    ColorPicker("", selection: $color)
+                        .labelsHidden()
+                })
+                .padding()
+                Button("Ajouter") {
+                    
+                }
+                Divider()
+                List {
+                    
+                }
+            })
+            .navigationTitle("Observable")
         }
-        .padding()
+       
     }
 }
 
