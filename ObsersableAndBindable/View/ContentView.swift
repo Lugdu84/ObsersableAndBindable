@@ -40,7 +40,7 @@ struct ContentView: View {
                 Divider()
                 List {
                     ForEach(model.colors) { palette in
-                        Text(palette.name)
+                        ColorTile(palette: palette)
                     }
                     .onDelete(perform: { indexSet in
                         model.colors.remove(atOffsets: indexSet)
